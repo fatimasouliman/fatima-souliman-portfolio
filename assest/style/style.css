@@ -11,6 +11,7 @@
     top: 0px;
     z-index: 100;
 }
+
 .nav-item:hover a{
     color: #adad03;
 }
@@ -31,12 +32,13 @@
 } 
 .home{
     background-image: url(../Images/personality.avif);
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    width:100%;
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 50px;
+    
 }
 
 .button , .contact .btn{
@@ -53,13 +55,10 @@
     cursor: pointer;
     background-color: rgb(53, 52, 52);
 }
-.Services , .contact , .about , .Portfolio , .client , .skills{
-    
+.Services , .contact , .about , .Portfolio , .client , .skills  {
     margin-top: 10rem;
-   
 }
 .Services .container{
-    width: 100%;
     margin: auto;
     gap: 20px;
 }
@@ -89,21 +88,32 @@
     margin-top: 10px;
    
 }
-.Portfolio .contimg {
-}
+
 .Portfolio .contimg{
     position: relative;
+    padding: 0px 2px 0px 2px!important;
+    transition: 0.7s ease;
 }
-.Portfolio .contimg .after{
-    padding: 10;
-    background-color: rgba(255, 1, 1, 0.212);
+.Portfolio .container .contimg .search{
+    visibility: hidden;
+    position: absolute;
+}
+.Portfolio .container .contimg:hover .search{
+    visibility: visible;
+    cursor: pointer;
+    content: " ";
+    background-color: rgba(58, 52, 52, 0.76);
     height: 100%;
     width: 100%;
-    position: absolute;
-    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;   
+    top: 0;
     left: 0;
-    
 }
+
+
 .container .profile img{
     width: 100%;
     
@@ -111,9 +121,9 @@
 .test{
     background-color: rgb(22, 21, 21);
     color: white;
-    width: 100%;
     height: 50vh;
 }
+
 .footer{
     background-color: #e9e1e1;
     padding: 20px;
